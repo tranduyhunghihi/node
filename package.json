@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "backend with nodeJS ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tranduyhunghihi/node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "hungdeptrai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tranduyhunghihi/node/issues"
+  },
+  "homepage": "https://github.com/tranduyhunghihi/node#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
