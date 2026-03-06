@@ -11,16 +11,14 @@ const hostname = process.env.HOST_NAME;
 
 // console.log("check env", process.env);
 
+//config req.body
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 //config template engine
 configViewEngine(app);
 //khai bao route
 app.use("/", webRoute);
-
-//test connection
-
-connection.query("SELECT * FROM Users", function (err, result, fields) {
-  console.log("result >>", result), console.log("fields >>", fields);
-});
 
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
