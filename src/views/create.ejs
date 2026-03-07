@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="nav-list">
+        <a href="/" class="nav-item">Home</a>
+        <a href="/create" class="nav-item active">Create User</a>
+    </div>
+
+    <div class="form-container">
+        <form action="/create-user" method="post">
+            <fieldset class="form">
+                <legend>Form add new user</legend>
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="text" placeholder="nhap email" name="email"/>
+                </div>
+                <div class="input-group">
+                    <label>Name:</label>
+                    <input type="text" placeholder="nhap name" name="name"/>
+                </div>
+                <div class="input-group">
+                    <label>City:</label>
+                    <input type="text" placeholder="nhap city" name="city"/>
+                </div>
+                <button class="add">Save</button>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        const navItems = document.querySelectorAll('.nav-item')
+        console.log(navItems)    
+        navItems.forEach(navItem => {
+            navItem.addEventListener('click', () => {
+                navItems.forEach(item => item.classList.remove('active'))
+
+                navItem.classList.add('active')
+            })
+        })
+
+    </script>
+</body>
+</html>

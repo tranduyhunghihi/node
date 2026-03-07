@@ -17,12 +17,13 @@
 }
 .nav-item{
     color: #fff;
+    width: 100px;
     text-decoration: none;
-    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding: 4px 8px;
 }
 .nav-item:hover{
     background-color: aquamarine;
@@ -39,7 +40,7 @@
 }
 .form{
     width: 400px;
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,4 +52,19 @@
     color: white;
     cursor: pointer;
     border-radius: 4px;
+}
+.table-container{
+    margin: 8px 12px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover{
+    background-color: coral;
 }
