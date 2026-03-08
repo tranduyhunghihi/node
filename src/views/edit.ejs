@@ -2,30 +2,35 @@
 <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <div class="nav-list">
         <a href="/" class="nav-item">Home</a>
-        <a href="/create" class="nav-item active">Create User</a>
+        <a href="/create" class="nav-item">Create User</a>
     </div>
 
     <div class="form-container">
-        <form action="/create-user" method="post">
+        <form action="/update-user" method="post">
             <fieldset class="form">
-                <legend>Form add new user</legend>
+                <legend>Form update user</legend>
+                <% const user = listUsers.find(user => user.id == userId ) %>
+                <div class="input-group d-none">
+                    <label>Id:</label>
+                    <input type="text" placeholder="nhap email" name="userId" value="<%= user.id %>"/>
+                </div>
                 <div class="input-group">
                     <label>Email:</label>
-                    <input type="text" placeholder="nhap email" name="email"/>
+                    <input type="text" placeholder="nhap email" name="email" value="<%= user.email %>"/>
                 </div>
                 <div class="input-group">
                     <label>Name:</label>
-                    <input type="text" placeholder="nhap name" name="name"/>
+                    <input type="text" placeholder="nhap name" name="name" value="<%= user.name %>"/>
                 </div>
                 <div class="input-group">
                     <label>City:</label>
-                    <input type="text" placeholder="nhap city" name="city"/>
+                    <input type="text" placeholder="nhap city" name="city" value="<%= user.city %>"/>
                 </div>
                 <button class="add">Save</button>
             </fieldset>

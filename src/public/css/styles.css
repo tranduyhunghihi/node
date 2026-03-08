@@ -68,3 +68,6 @@ th,td{
 tr:hover{
     background-color: coral;
 }
+.d-none{
+    display: none;
+}

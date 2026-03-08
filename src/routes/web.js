@@ -3,8 +3,10 @@ const {
   getHomePage,
   getABC,
   getHungdeptrai,
-  postCreateUser,
   getCreatePage,
+  getUpdatePage,
+  postCreateUser,
+  postUpdateUser,
 } = require("../controllers/homeController");
 const router = express.Router();
 
@@ -16,6 +18,10 @@ router.get("/hungdeptrai", getHungdeptrai);
 
 router.get("/create", getCreatePage);
 
+router.get("/update/:id", getUpdatePage);
+
 router.post("/create-user", postCreateUser);
+
+router.post("/update-user", postUpdateUser);
 
 module.exports = router;
